@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<OutputType>WinExe</OutputType>
 		<TargetFramework>net8.0-windows</TargetFramework>
@@ -33,6 +33,13 @@
 		<Content Include="appsettings.json">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\AbpWpfWithCM.Application.Contracts\AbpWpfWithCM.Application.Contracts.csproj" />
+	  <ProjectReference Include="..\AbpWpfWithCM.Application\AbpWpfWithCM.Application.csproj" />
+	  <ProjectReference Include="..\AbpWpfWithCM.Domain\AbpWpfWithCM.Domain.csproj" />
+	  <ProjectReference Include="..\AbpWpfWithCM.EntityFramework\AbpWpfWithCM.EntityFramework.csproj" />
 	</ItemGroup>
 
 </Project>

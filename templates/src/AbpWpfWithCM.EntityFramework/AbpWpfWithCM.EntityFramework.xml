@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AbpWpfWithCM.EntityFramework</name>
+    </assembly>
+    <members>
+        <member name="P:AbpWpfWithCM.EntityFramework.AbpWpfWithCMDbContext.AbpSettings">
+            <summary>
+            App设置
+            </summary>
+        </member>
+        <member name="P:AbpWpfWithCM.EntityFramework.AbpWpfWithCMDbContext.AbpSettingDefinitions">
+            <summary>
+            App设置定义
+            </summary>
+        </member>
+        <member name="P:AbpWpfWithCM.EntityFramework.AbpWpfWithCMDbContext.RefreshToken">
+            <summary>
+            刷新Token
+            </summary>
+        </member>
+        <member name="P:AbpWpfWithCM.EntityFramework.AbpWpfWithCMDbContext.User">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="M:AbpWpfWithCM.EntityFramework.EfMigrateMiddleWare.UseAutoMigration(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            自动合并数据库
+            </summary>
+            <param name="app"></param>
+            <param name="db"></param>
+        </member>
+        <member name="M:AbpWpfWithCM.EntityFramework.EfMigrateMiddleWare.UseAutoMigration``1(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            自动合并数据库
+            </summary>
+            <typeparam name="TDbContext"></typeparam>
+            <param name="app"></param>
+        </member>
+        <member name="T:CruiseTimeGJ.EntityFramework.Seeds.UserDataSeedContributor">
+            <summary>
+            用户数据种子贡献者
+            </summary>
+        </member>
+    </members>
+</doc>
