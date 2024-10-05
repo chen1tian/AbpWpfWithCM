@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Logging.Abstractions;
 using Volo.Abp.DependencyInjection;
 
-namespace AbpWpfWithCM
+namespace AbpWpfWithCM.WpfApp
 {
     public class HelloWorldService : ITransientDependency
     {

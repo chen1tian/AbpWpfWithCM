@@ -3,21 +3,16 @@ using Serilog;
 using Serilog.Events;
 using System;
 using System.Windows;
-using Volo.Abp;
 
-namespace AbpWpfWithCM
+namespace AbpWpfWithCM.WpfApp
 {
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
-    public partial class App : Application
+    public partial class App : System.Windows.Application
     {
-
-
         protected override async void OnStartup(StartupEventArgs e)
         {
-
-
             base.OnStartup(e);
         }
     }

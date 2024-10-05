@@ -3,10 +3,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.Autofac;
 using Volo.Abp.Modularity;
 
-namespace AbpWpfWithCM
+namespace AbpWpfWithCM.WpfApp
 {
     [DependsOn(typeof(AbpAutofacModule))]
-    public class WpfAppModule : AbpModule
+    public class AbpWpfWithCMModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {

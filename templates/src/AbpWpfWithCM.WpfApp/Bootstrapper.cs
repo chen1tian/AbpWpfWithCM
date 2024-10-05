@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using Volo.Abp;
 
-namespace AbpWpfWithCM
+namespace AbpWpfWithCM.WpfApp
 {
     public class Bootstrapper : BootstrapperBase
     {
@@ -39,7 +39,7 @@ namespace AbpWpfWithCM
             {
                 Log.Information("Starting WPF host.");
 
-                _abpApplication = await AbpApplicationFactory.CreateAsync<WpfAppModule>(options =>
+                _abpApplication = await AbpApplicationFactory.CreateAsync<AbpWpfWithCMModule>(options =>
                 {
                     options.UseAutofac();
                     options.Services.AddLogging(loggingBuilder => loggingBuilder.AddSerilog(dispose: true));
@@ -60,7 +60,7 @@ namespace AbpWpfWithCM
 
         protected override object GetInstance(Type service, string key)
         {
-            return _abpApplication.Services.GetRequiredService(service);
+            return _abpApplication.ServiceProvider.GetRequiredKeyedService(service, key);
         }
 
         protected override IEnumerable<object> GetAllInstances(Type service)

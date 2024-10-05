@@ -152,18 +152,5 @@
             返回对象的Description标注数据
             </summary>
         </member>
-        <member name="T:AbpWpfWithCM.Domain.SignalR.MsgHub">
-            <summary>
-            singalr消息中心
-            </summary>    
-        </member>
-        <member name="M:AbpWpfWithCM.Domain.SignalR.MsgHub.SendMessage(System.String,System.String)">
-            <summary>
-            发送消息给所有用户
-            </summary>
-            <param name="user"></param>
-            <param name="message"></param>
-            <returns></returns>
-        </member>
     </members>
 </doc>

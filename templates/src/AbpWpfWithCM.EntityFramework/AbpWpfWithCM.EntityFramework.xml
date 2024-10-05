@@ -38,10 +38,5 @@
             <typeparam name="TDbContext"></typeparam>
             <param name="app"></param>
         </member>
-        <member name="T:CruiseTimeGJ.EntityFramework.Seeds.UserDataSeedContributor">
-            <summary>
-            用户数据种子贡献者
-            </summary>
-        </member>
     </members>
 </doc>

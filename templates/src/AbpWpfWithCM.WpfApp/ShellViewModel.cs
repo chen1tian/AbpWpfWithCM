@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Volo.Abp.DependencyInjection;
 
-namespace AbpWpfWithCM
+namespace AbpWpfWithCM.WpfApp
 {
     public class ShellViewModel : Conductor<object>
     {
