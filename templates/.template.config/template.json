@@ -1,0 +1,9 @@
+{
+  "author": "yitian.chen",
+  "classifications": [ "wpf.abp.mc" ],
+  "identity": "wpf.abp.mc",
+  "name": "Wpf Project Using Abp",
+  "shortName": "wpf.abp.mc",
+  "sourceName": "AbpWpfWithCM",
+  "preferNameDirectory": true 
+}
