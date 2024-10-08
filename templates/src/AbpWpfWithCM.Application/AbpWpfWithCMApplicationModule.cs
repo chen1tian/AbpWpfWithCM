@@ -1,6 +1,7 @@
 ﻿using AbpWpfWithCM.Application.Contracts;
 using AbpWpfWithCM.Domain;
 using AbpWpfWithCM.EntityFramework;
+using AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using Volo.Abp.Application;
@@ -24,6 +25,15 @@ namespace AbpWpfWithCM.Application
         {
             // 对象映射
             context.Services.AddAutoMapperObjectMapper<AbpWpfWithCMApplicationModule>();
+                                   
+            var services = context.Services;
+            IConfigurationProvider config = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<AbpWpfWithCMApplicationAutoMapProfile>();
+            });
+            services.AddSingleton(config);
+            services.AddScoped<IMapper, Mapper>();
+
             Configure<AbpAutoMapperOptions>(options =>
             {
                 options.AddMaps<AbpWpfWithCMApplicationModule>(validate: true);

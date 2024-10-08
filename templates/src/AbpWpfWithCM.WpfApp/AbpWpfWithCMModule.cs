@@ -28,6 +28,8 @@ namespace AbpWpfWithCM.WpfApp
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
             context.Services.AddSingleton<IWindowManager, WindowManager>();
+            context.Services.AddSingleton<IEventAggregator, EventAggregator>();
+
             context.Services.AddTransient<ShellViewModel>();
             context.Services.AddDbContext<AbpWpfWithCMDbContext>(options =>
             {
