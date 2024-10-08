@@ -1,4 +1,5 @@
-﻿using Caliburn.Micro;
+﻿using AbpWpfWithCM.EntityFramework;
+using Caliburn.Micro;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 using Serilog.Events;
@@ -56,6 +57,18 @@ namespace AbpWpfWithCM.WpfApp
             }
 
             await DisplayRootViewForAsync<ShellViewModel>();
+
+            // 自动初始化数据库
+            AutoMigration();
+        }
+
+        /// <summary>
+        /// 自动初始化数据库
+        /// </summary>
+        private void AutoMigration()
+        {
+            var dbContext = _abpApplication.ServiceProvider.GetRequiredService<AbpWpfWithCMDbContext>();
+            EfMigrateMiddleWare.MigrationDb(dbContext);
         }
 
         protected override object GetInstance(Type service, string key)
