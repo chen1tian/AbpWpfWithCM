@@ -14,16 +14,6 @@
             App设置定义
             </summary>
         </member>
-        <member name="P:AbpWpfWithCM.EntityFramework.AbpWpfWithCMDbContext.RefreshToken">
-            <summary>
-            刷新Token
-            </summary>
-        </member>
-        <member name="P:AbpWpfWithCM.EntityFramework.AbpWpfWithCMDbContext.User">
-            <summary>
-            用户
-            </summary>
-        </member>
         <member name="M:AbpWpfWithCM.EntityFramework.EfMigrateMiddleWare.UseAutoMigration(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.EntityFrameworkCore.DbContext)">
             <summary>
             自动合并数据库
@@ -37,6 +27,18 @@
             </summary>
             <typeparam name="TDbContext"></typeparam>
             <param name="app"></param>
+        </member>
+        <member name="T:AbpWpfWithCM.EntityFramework.Migrations.Init">
+            <inheritdoc />
+        </member>
+        <member name="M:AbpWpfWithCM.EntityFramework.Migrations.Init.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AbpWpfWithCM.EntityFramework.Migrations.Init.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AbpWpfWithCM.EntityFramework.Migrations.Init.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
         </member>
     </members>
 </doc>

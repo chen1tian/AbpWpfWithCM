@@ -36,7 +36,7 @@
 		</Content>
 	</ItemGroup>
 
-	<ItemGroup>
+	<ItemGroup>	  
 	  <ProjectReference Include="..\AbpWpfWithCM.Application.Contracts\AbpWpfWithCM.Application.Contracts.csproj" />
 	  <ProjectReference Include="..\AbpWpfWithCM.Application\AbpWpfWithCM.Application.csproj" />
 	  <ProjectReference Include="..\AbpWpfWithCM.Domain\AbpWpfWithCM.Domain.csproj" />

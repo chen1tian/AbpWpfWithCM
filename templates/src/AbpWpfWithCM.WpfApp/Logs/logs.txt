@@ -1,0 +1,60 @@
+2024-10-08 15:12:26.775 +08:00 [INF] Starting WPF host.
+2024-10-08 15:12:27.821 +08:00 [INF] Loaded ABP modules:
+2024-10-08 15:12:27.822 +08:00 [INF] - AbpWpfWithCM.WpfApp.AbpWpfWithCMModule
+2024-10-08 15:12:27.822 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2024-10-08 15:12:27.822 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2024-10-08 15:12:27.826 +08:00 [INF] Initialized all ABP modules.
+2024-10-08 15:13:35.336 +08:00 [INF] Starting WPF host.
+2024-10-08 15:13:36.422 +08:00 [INF] Loaded ABP modules:
+2024-10-08 15:13:36.422 +08:00 [INF] - AbpWpfWithCM.WpfApp.AbpWpfWithCMModule
+2024-10-08 15:13:36.422 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2024-10-08 15:13:36.422 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2024-10-08 15:13:36.426 +08:00 [INF] Initialized all ABP modules.
+2024-10-08 15:14:07.799 +08:00 [INF] Starting WPF host.
+2024-10-08 15:14:07.880 +08:00 [INF] Loaded ABP modules:
+2024-10-08 15:14:07.881 +08:00 [INF] - AbpWpfWithCM.WpfApp.AbpWpfWithCMModule
+2024-10-08 15:14:07.881 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2024-10-08 15:14:07.881 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2024-10-08 15:14:07.884 +08:00 [INF] Initialized all ABP modules.
+2024-10-08 15:15:05.315 +08:00 [INF] Starting WPF host.
+2024-10-08 15:15:06.454 +08:00 [INF] Loaded ABP modules:
+2024-10-08 15:15:06.454 +08:00 [INF] - AbpWpfWithCM.WpfApp.AbpWpfWithCMModule
+2024-10-08 15:15:06.454 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2024-10-08 15:15:06.454 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2024-10-08 15:15:06.458 +08:00 [INF] Initialized all ABP modules.
+2024-10-08 15:15:24.064 +08:00 [INF] Starting WPF host.
+2024-10-08 15:15:24.146 +08:00 [INF] Loaded ABP modules:
+2024-10-08 15:15:24.146 +08:00 [INF] - AbpWpfWithCM.WpfApp.AbpWpfWithCMModule
+2024-10-08 15:15:24.146 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2024-10-08 15:15:24.146 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2024-10-08 15:15:24.150 +08:00 [INF] Initialized all ABP modules.
+2024-10-08 15:15:47.373 +08:00 [INF] Starting WPF host.
+2024-10-08 15:15:47.458 +08:00 [INF] Loaded ABP modules:
+2024-10-08 15:15:47.458 +08:00 [INF] - AbpWpfWithCM.WpfApp.AbpWpfWithCMModule
+2024-10-08 15:15:47.458 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2024-10-08 15:15:47.458 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2024-10-08 15:15:47.462 +08:00 [INF] Initialized all ABP modules.
+2024-10-08 15:15:55.439 +08:00 [INF] Starting WPF host.
+2024-10-08 15:15:55.520 +08:00 [INF] Loaded ABP modules:
+2024-10-08 15:15:55.521 +08:00 [INF] - AbpWpfWithCM.WpfApp.AbpWpfWithCMModule
+2024-10-08 15:15:55.521 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2024-10-08 15:15:55.521 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2024-10-08 15:15:55.524 +08:00 [INF] Initialized all ABP modules.
+2024-10-08 15:17:47.760 +08:00 [INF] Starting WPF host.
+2024-10-08 15:17:48.802 +08:00 [INF] Loaded ABP modules:
+2024-10-08 15:17:48.803 +08:00 [INF] - AbpWpfWithCM.WpfApp.AbpWpfWithCMModule
+2024-10-08 15:17:48.803 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2024-10-08 15:17:48.803 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2024-10-08 15:17:48.807 +08:00 [INF] Initialized all ABP modules.
+2024-10-08 15:17:57.792 +08:00 [INF] Starting WPF host.
+2024-10-08 15:17:57.872 +08:00 [INF] Loaded ABP modules:
+2024-10-08 15:17:57.873 +08:00 [INF] - AbpWpfWithCM.WpfApp.AbpWpfWithCMModule
+2024-10-08 15:17:57.873 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2024-10-08 15:17:57.873 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2024-10-08 15:17:57.877 +08:00 [INF] Initialized all ABP modules.
+2024-10-08 15:27:52.757 +08:00 [INF] Starting WPF host.
+2024-10-08 15:27:53.567 +08:00 [INF] Loaded ABP modules:
+2024-10-08 15:27:53.568 +08:00 [INF] - AbpWpfWithCM.WpfApp.AbpWpfWithCMModule
+2024-10-08 15:27:53.568 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2024-10-08 15:27:53.568 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2024-10-08 15:27:53.572 +08:00 [INF] Initialized all ABP modules.

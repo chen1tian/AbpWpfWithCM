@@ -1,5 +1,4 @@
-﻿using AbpWpfWithCM.Domain.Domains;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,18 +34,6 @@ namespace AbpWpfWithCM.EntityFramework
         /// App设置定义
         /// </summary>
         public DbSet<SettingDefinitionRecord> AbpSettingDefinitions { get; set; }
-        #endregion
-
-        #region 实体
-        /// <summary>
-        /// 刷新Token
-        /// </summary>
-        public virtual DbSet<RefreshToken> RefreshToken { get; set; }
-
-        /// <summary>
-        /// 用户
-        /// </summary>
-        public virtual DbSet<User> User { get; set; }
-        #endregion
+        #endregion  
     }
 }
