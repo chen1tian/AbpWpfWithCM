@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AbpWpfWithCM"
         mc:Ignorable="d"
-        Title="ShellView" Height="450" Width="800">
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized">
     <Grid>
         <TextBlock Text="{Binding Path=L[HelloWorld]}"></TextBlock>
     </Grid>
