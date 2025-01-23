@@ -2,6 +2,7 @@
 using AbpWpfWithCM.Application.Contracts;
 using AbpWpfWithCM.Domain;
 using AbpWpfWithCM.EntityFramework;
+using AutoMapper;
 using Caliburn.Micro;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -27,10 +28,14 @@ namespace AbpWpfWithCM.WpfApp
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
+            // 依赖注入
             context.Services.AddSingleton<IWindowManager, WindowManager>();
             context.Services.AddSingleton<IEventAggregator, EventAggregator>();
 
             context.Services.AddTransient<ShellViewModel>();
+
+
+            // 数据库依赖注入
             context.Services.AddDbContext<AbpWpfWithCMDbContext>(options =>
             {
                 options.UseSqlite();
@@ -40,6 +45,36 @@ namespace AbpWpfWithCM.WpfApp
             {
                 options.UseSqlite<AbpWpfWithCMDbContext>();
                 options.UseSqlite<SettingManagementDbContext>();
+            });
+
+            // 配置AutoMapper
+            ConfigureAutoMap(context);
+        }
+
+        /// <summary>
+        /// 配置AutoMapper
+        /// </summary>
+        /// <param name="context"></param>
+        public void ConfigureAutoMap(ServiceConfigurationContext context)
+        {
+            // 对象映射
+            context.Services.AddAutoMapperObjectMapper<AbpWpfWithCMApplicationModule>();
+            // 对象映射
+            context.Services.AddAutoMapperObjectMapper<AbpWpfWithCMModule>();
+
+            var services = context.Services;
+            AutoMapper.IConfigurationProvider config = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<AbpWpfWithCMApplicationAutoMapProfile>();
+                cfg.AddProfile<AbpWpfWithCMWpfAppAutoMapProfile>();
+            });
+            services.AddSingleton(config);
+            services.AddScoped<IMapper, Mapper>();
+
+            Configure<AbpAutoMapperOptions>(options =>
+            {
+                options.AddMaps<AbpWpfWithCMApplicationModule>(validate: true);
+                options.AddMaps<AbpWpfWithCMModule>(validate: true);
             });
         }
     }

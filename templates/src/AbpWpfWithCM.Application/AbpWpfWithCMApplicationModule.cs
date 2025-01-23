@@ -23,21 +23,7 @@ namespace AbpWpfWithCM.Application
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
-            // 对象映射
-            context.Services.AddAutoMapperObjectMapper<AbpWpfWithCMApplicationModule>();
-                                   
-            var services = context.Services;
-            IConfigurationProvider config = new MapperConfiguration(cfg =>
-            {
-                cfg.AddProfile<AbpWpfWithCMApplicationAutoMapProfile>();
-            });
-            services.AddSingleton(config);
-            services.AddScoped<IMapper, Mapper>();
-
-            Configure<AbpAutoMapperOptions>(options =>
-            {
-                options.AddMaps<AbpWpfWithCMApplicationModule>(validate: true);
-            });
+            
         }
     }
 }
