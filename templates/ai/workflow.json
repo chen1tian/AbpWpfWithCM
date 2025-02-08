@@ -1,0 +1,15 @@
+{
+    "前置文档": ["ai/项目结构.md"],
+    "工作流列表": [
+        {
+            "名称": "生成实体类",
+            "文件路径": "ai/workflows/generate_entity.json",
+            "描述": "用于生成新的实体类，包括领域层实体定义和EF Core层的DbSet配置"
+        },
+        {
+            "名称": "生成CRUD服务",
+            "文件路径": "ai/workflows/generate_crud_service.json",
+            "描述": "用于生成实体相关的CRUD服务，包括应用服务接口层和实现层"
+        }
+    ]
+}

@@ -1,0 +1,68 @@
+{
+    "名称": "生成CRUD服务",
+    "前置工作流": ["生成实体类"],
+    "步骤": {
+        "应用服务接口层": [
+            {
+                "序号": 1,
+                "操作": "创建服务目录",
+                "路径": "Application.Contracts/{实体复数名称}"
+            },
+            {
+                "序号": 2,
+                "操作": "创建DTO",
+                "路径": "Application.Contracts/{实体复数名称}/Dtos",
+                "模板": {
+                    "类名": "{实体名称}Dto",
+                    "继承": "EntityDto<主键>",
+                    "映射源": "实体类属性"
+                }
+            },
+            {
+                "序号": 3,
+                "操作": "创建接口",
+                "文件名": "I{实体名称}AppService",
+                "模板": {
+                    "继承": ["ICrudAppService<{实体名称}Dto, 主键>", "ITransientDependency"]
+                }
+            }
+        ],
+        "应用服务实现层": [
+            {
+                "序号": 1,
+                "操作": "创建服务目录",
+                "路径": "Application/{实体复数名称}"
+            },
+            {
+                "序号": 2,
+                "操作": "创建服务类",
+                "文件名": "{实体名称}AppService",
+                "模板": {
+                    "继承": "CrudAppService<{实体名称}, {实体名称}Dto, 主键>",
+                    "实现": "I{实体名称}AppService",
+                    "构造函数": {
+                        "参数": "IRepository<{实体名称}, 主键> repository",
+                        "基类调用": "base(repository)"
+                    }
+                }
+            },
+            {
+                "序号": 3,
+                "操作": "配置AutoMapper",
+                "位置": "ApplicationAutoMapProfile.cs",
+                "映射规则": [
+                    {
+                        "源": "{实体名称}",
+                        "目标": "{实体名称}Dto",
+                        "配置": "MemberList.Destination"
+                    },
+                    {
+                        "源": "{实体名称}Dto",
+                        "目标": "{实体名称}",
+                        "配置": "MemberList.Source"
+                    }
+                ]
+            }
+        ]
+    }
+}

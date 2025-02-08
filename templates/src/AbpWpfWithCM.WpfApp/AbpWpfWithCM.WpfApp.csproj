@@ -43,4 +43,8 @@
 	  <ProjectReference Include="..\AbpWpfWithCM.EntityFramework\AbpWpfWithCM.EntityFramework.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="UI\Components\" />
+	</ItemGroup>
+
 </Project>
