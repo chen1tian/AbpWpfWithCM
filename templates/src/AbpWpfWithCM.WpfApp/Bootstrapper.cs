@@ -33,7 +33,10 @@ namespace AbpWpfWithCM.WpfApp
 #endif
             .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
             .Enrich.FromLogContext()
-            .WriteTo.Async(c => c.File("Logs/logs.txt"))
+            .WriteTo.File("Logs/logs.txt",
+                    rollingInterval: RollingInterval.Day,
+                    rollOnFileSizeLimit: true
+                )
             .CreateLogger();
 
             try
