@@ -1,0 +1,165 @@
+#.NET 开发规范
+你是一名资深的.NET 桌面端程序开发人员，精通 C#、WPF和 Entity Framework Core。
+
+## 了解项目
+- 本项目是一个C#语言编写的Windows应用，使用了Wpf做界面框架。
+- 项目集成`Caliburn Micro`框架作为Wpf界面的Mvvm框架。`@Docs` -> @Caliburn Micro 
+- 项目集成了`Abp`框架作为域和应用程序的基础结构。`@Docs` -> @Abp
+
+## 第一步：项目初始化
+  - 当用户提出任何需求时，首先浏览项目根目录下的README.md文件和所有代码文档，理解项目目标、架构和实现方式。
+  - 阅读`docs/类结构.md`
+
+## 第二步：项目总结和优化
+    - 完成任务后，反思完成步骤，思考项目可能存在的问题和改进方式。
+
+## 代码风格与结构
+- 编写简洁、地道的 C# 代码，并附上准确示例。
+- 遵循.NET 和 ASP.NET Core 的惯例与最佳实践。
+- 酌情使用面向对象和函数式编程模式。
+- 对集合操作优先选用 LINQ 和 lambda 表达式。
+- 使用具有描述性的变量名和方法名（例如"IsUserSignedIn"、"CalculateTotal"）。
+- 依照.NET 惯例组织文件（控制器、模型、服务等）。
+- 在属性和方法上添加文档注释，说明其用途、参数和返回值。
+- 在字段上添加注释，说明其用途。
+
+## 命名规范
+- 类名、方法名和公共成员使用 PascalCase 命名法。
+- 局部变量和私有字段使用 camelCase 命名法。
+- 常量使用大写字母（UPPERCASE）。
+- 接口名前缀为"I"（例如"IUserService" ）。
+
+## C# 与.NET 使用
+- 适当使用 C# 10 及以上版本的特性（例如记录类型、模式匹配、空合并赋值）。
+- 充分利用内置的 ASP.NET Core 特性与中间件。
+- 有效地使用 Entity Framework Core 进行数据库操作。
+
+## 语法与格式
+- 遵循 C# 编码惯例（https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions ）。
+- 使用 C# 富有表现力的语法（例如空条件运算符、字符串插值）。
+- 在类型明显时，使用"var"进行隐式类型声明。
+
+## 错误处理与验证
+- 使用异常处理异常情况，而非控制流程。
+- 使用内置的.NET 日志记录功能或第三方日志记录器实现恰当的错误日志记录。
+- 使用数据注解或 Fluent Validation 进行模型验证。
+- 实现全局异常处理中间件。
+- 返回合适的 HTTP 状态码和一致的错误响应。
+
+## 性能优化
+- 对 I/O 绑定操作使用带有 async/await 的异步编程。
+- 使用 IMemoryCache 或分布式缓存实现缓存策略。
+- 使用高效的 LINQ 查询，避免 N + 1 查询问题。
+- 对大数据集实现分页。
+
+## 关键惯例
+- 使用依赖注入实现松耦合与可测试性。
+- 根据复杂度决定是实现仓储模式，还是直接使用 Entity Framework Core。
+- 如有需要，使用 AutoMapper 进行对象到对象的映射。
+- 使用 IHostedService 或 BackgroundService 实现后台任务。
+
+## 测试
+- 使用 xUnit 编写单元测试。
+- 使用 Moq 或 NSubstitute 模拟依赖项。
+
+## 业务词典
+- 阅读`docs/业务词典.md`
+- 在开发过程中，如果遇到业务词典中没有描述的场景，请参考`docs/业务词典.md`中的描述，并提出新的业务词典。
+- 在开发过程中，如果遇到业务词典中描述的场景，请参考`docs/业务词典.md`中的描述，并更新业务词典。
+
+## 开发规范：
+  rules:
+    # 1. MVVM架构规范
+    mvvm:
+      - 所有UI相关代码必须严格遵循MVVM模式
+      - View必须以View结尾，对应的ViewModel必须以ViewModel结尾
+      - ViewModel必须继承自ModuleBase并实现ITransientModule接口
+      - 使用Caliburn.Micro框架实现MVVM绑定
+      - 所有ViewModel必须使用[AddINotifyPropertyChangedInterface]特性
+
+    # 2. 模块化设计规范
+    module-structure:
+      - 每个功能模块必须包含独立的子目录
+      - 子模块必须包含完整的MVVM结构
+      - 模块间通信必须通过ViewModel进行
+      - 禁止跨模块直接访问View层
+
+    # 3. UI开发规范
+    ui-development:
+      - 使用MaterialDesignInXAML作为UI框架
+      - 所有自定义控件必须放在Controls子目录
+      - 使用Grid布局进行页面布局
+      - 需要调整大小的分隔区域使用GridSplitter
+      - 所有样式定义必须在ResourceDictionary中
+
+    # 4. 依赖注入规范
+    dependency-injection:
+      - 所有依赖必须通过构造函数注入
+      - 服务生命周期优先使用Transient
+      - 禁止在构造函数中执行耗时操作
+      - 必须定义接口进行依赖注入
+
+    # 5. 响应式编程规范
+    reactive-programming:
+      - 属性更新必须实现INotifyPropertyChanged
+      - 集合类型必须使用ObservableCollection
+      - 事件处理必须考虑内存泄漏问题
+      - 异步操作必须使用async/await
+
+    # 6. 代码规范
+    code-standards:
+      - 必须添加XML文档注释
+      - 私有字段使用_camelCase命名
+      - 公共属性使用PascalCase命名
+      - 接口必须以I开头
+      - 异常处理必须记录日志
+
+    # 7. 文件组织规范
+    file-organization:
+      - Views目录存放所有视图文件
+      - ViewModels目录存放所有视图模型
+      - Models目录存放数据模型
+      - Services目录存放业务逻辑
+      - 每个子模块必须有README.md文档
+
+    # 8. AppService规范
+      - 对于CrudAppService, 需要根据参数查询数据时，禁止全部查询后再过滤，而是设置ICrudAppService的TGetListInput参数，再在AppService中重载`CreateFilteredQueryAsync`方法，根据参数查询数据。
+
+  glob_patterns:
+    - "src/UCFLSWinApp.WpfApp/Modules/LocationModule/**/*.cs"
+    - "src/UCFLSWinApp.WpfApp/Modules/LocationModule/**/*.xaml"
+
+  examples:
+    view_example: |
+      <UserControl x:Class="UCFLSWinApp.WpfApp.Modules.LocationModule.LocationView"
+                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+          <Grid>
+              <!-- 使用Grid布局 -->
+          </Grid>
+      </UserControl>
+
+    viewmodel_example: |
+      [AddINotifyPropertyChangedInterface]
+      public class LocationViewModel : ModuleBase, ITransientModule
+      {
+          private readonly ILocationService _locationService;
+
+          public LocationViewModel(ILocationService locationService)
+          {
+              _locationService = locationService;
+          }
+
+          /// <summary>
+          /// 属性描述
+          /// </summary>
+          public string PropertyName { get; set; }
+      }
+
+  best_practices:
+    - 优先使用依赖注入实现模块间通信
+    - 避免在View.xaml.cs中编写业务逻辑
+    - 定期进行代码审查确保规范执行
+    - 编写单元测试验证ViewModel逻辑
+    - 保持模块功能的单一职责
+
