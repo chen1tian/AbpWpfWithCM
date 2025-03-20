@@ -59,10 +59,11 @@ namespace AbpWpfWithCM.WpfApp
                 Log.Fatal(ex, "Host terminated unexpectedly!");
             }
 
-            await DisplayRootViewForAsync<ShellViewModel>();
 
             // 自动初始化数据库
             AutoMigration();
+
+            await DisplayRootViewForAsync<ShellViewModel>();
         }
 
         /// <summary>
