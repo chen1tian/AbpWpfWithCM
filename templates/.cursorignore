@@ -1,0 +1,10 @@
+/.vs
+**/Debug/
+**/Release/
+
+**/obj
+**/bin
+/src/UCFLSWinApp.WpfApp/Logs/logs.txt
+/Logs
+/src/UCFLSWinApp.WpfApp/UCFLSWinAppDb.sqlite
+/src/UCFLSWinApp.WpfApp/Logs
