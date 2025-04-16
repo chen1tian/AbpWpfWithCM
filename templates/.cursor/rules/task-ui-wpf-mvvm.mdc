@@ -1,0 +1,17 @@
+---
+description: 新建|修改界面布局|新增修改控件
+globs: 
+alwaysApply: false
+---
+## 
+- 界面使用Wpf Mvvm框架Caliburn Micro
+- 控件库使用MaterialDesign
+
+## 命名格式
+- View：<名称>View.xaml
+- View后端：<名称>View.cs
+- ViewModel: <名称>ViewModel.cs
+
+## 依赖注入
+使用Abp接口`ITransientDependency`及`ISingletonDependency`自动注入。
+可以使用Ioc容器获取实例: `Ioc.Get<T>()`

@@ -1,0 +1,11 @@
+---
+description: 阅读项目结构
+globs: 
+alwaysApply: false
+---
+
+仔细阅读根据下面的项目结构文档，了解项目目录组成
+
+[类结构.md](mdc:docs/类结构.md)
+
+

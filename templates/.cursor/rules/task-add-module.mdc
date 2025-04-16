@@ -1,0 +1,29 @@
+---
+description: 新增模块
+globs: 
+alwaysApply: false
+---
+[类结构.md](mdc:docs/类结构.md)
+
+# 新增模块
+使用Wpf Mvvm， CaliburnMicro框架。
+功能：新增模块代码
+步骤：
+1. 创建模块文件夹，在`WPF 客户端应用`下`Modules`目录中创建一个新文件夹，名称为`<模块名称>Module`。
+2. 在模块文件夹内创建ViewModel文件，名称为`<模块英文名>ModuleViewModel.cs`。内容为：
+    ```csharp
+    /// <summary>
+    /// <模块中文名>模块
+    /// </summary>
+    [AddINotifyPropertyChangedInterface]
+    public class <模块英文名>ModuleViewModel : ModuleBase, ITransientModule
+    {
+
+        public <模块英文名>ModuleViewModel() : base("<模块中文名>", <MaterialDesign图标>)
+        {
+            DisplayName = "<模块中文名>";            
+        }
+    }
+    ```
+3. 在模块文件夹内创建View文件，该文件为Wpf UserControl。名称为`<模块英文名>ModuleView`, 按需求创建xaml文件及其后端。注意这里使用了mvvm模式，后端文件不需要进行任何处理
+4. 在主界面`src\UCFLSWinApp.WpfApp\ShellViewModel.cs`的`InitModules`方法中，增加新的模块
