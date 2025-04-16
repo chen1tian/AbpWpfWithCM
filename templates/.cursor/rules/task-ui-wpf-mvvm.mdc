@@ -3,7 +3,7 @@ description: 新建|修改界面布局|新增修改控件
 globs: 
 alwaysApply: false
 ---
-## 
+## 技术架构
 - 界面使用Wpf Mvvm框架Caliburn Micro
 - 控件库使用MaterialDesign
 
@@ -15,3 +15,36 @@ alwaysApply: false
 ## 依赖注入
 使用Abp接口`ITransientDependency`及`ISingletonDependency`自动注入。
 可以使用Ioc容器获取实例: `Ioc.Get<T>()`
+
+## 注意
+- 项目使用Mvvm模式，View后端不需要控件引用等代码
+
+## 组件使用
+1. 使用组件时，先从构造函数中注入组件, 注意使用属性，例如：
+```csharp
+public class MyViewModel : Screen
+{
+    /// <summary>
+    /// 组件ViewModel
+    /// </summary>
+    public ComponentViewModel MyComponentViewModel {get; set;}
+
+    public MyViewModel(ComponentViewModel myComponentViewModel)
+    {
+        MyComponentViewModel = myComponentViewModel;
+    }
+}
+```
+
+2. 在XAML中使用组件时，使用`x:Name`属性来引用组件的ViewModel，例如：
+```xml
+<UserControl x:Class="MyNamespace.MyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             >
+    <Grid>
+        <!-- MyComponentViewModel -->
+        <ContentControl x:Name="MyComponentViewModel" />
+    </Grid>
+</UserControl>
+```
