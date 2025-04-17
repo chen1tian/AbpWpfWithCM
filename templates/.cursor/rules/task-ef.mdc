@@ -1,0 +1,20 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+# ef框架
+
+## 数据库迁移
+
+- 查询迁移
+
+```bash
+dotnet ef migrations list --project .\src\PDDoubeEndAnalysis.EntityFramework\PDDoubeEndAnalysis.EntityFramework.csproj  --startup-project .\src\PDDoubeEndAnalysis.WpfApp\PDDoubeEndAnalysis.WpfApp.csproj            
+```
+
+- 新增迁移
+```bash
+dotnet ef migrations add <最后一个迁移版本加1> --project .\src\PDDoubeEndAnalysis.EntityFramework\PDDoubeEndAnalysis.EntityFramework.csproj --startup-project .\src\PDDoubeEndAnalysis.WpfApp\PDDoubeEndAnalysis.WpfApp.csproj    
+```
