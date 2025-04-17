@@ -1,0 +1,14 @@
+---
+description: 确认,弹窗确认,弹窗消息,消息提示
+globs: 
+alwaysApply: false
+---
+# 使用MsgHelper.Confirm方法确认
+```csharp
+var result = MsgHelper.Confirm("确定要删除该变量吗");
+
+if (result)
+{
+    // 确认后的逻辑
+}
+```
