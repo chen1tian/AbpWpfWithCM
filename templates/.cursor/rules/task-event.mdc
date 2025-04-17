@@ -1,0 +1,33 @@
+---
+description: 事件/聚合器/发布/订阅
+globs: 
+alwaysApply: false
+---
+# 事件聚合器/事件订阅
+使用 Caliburn.Micro 的`IEventAggregator`来实现事件发布/订阅
+IEventAggregator从构造函数注入
+
+## 发布
+```csharp
+// 发布不与UI交互事件
+_eventAggregator.PublishOnBackgroundThreadAsync(object message);
+// or 发布当前进程事件
+_eventAggregator.PublishOnCurrentThreadAsync(object message);
+// or 发布UI进程事件
+_eventAggregator.PublishOnUIThreadAsync(object message);
+```
+
+## 订阅
+```csharp
+// 后台事件，不需要与UI交互
+_eventAggregator.SubscribeOnBackgroundThread(this);
+
+// or ui进程事件
+_eventAggregator.SubscribeOnUIThread(this);
+
+// or 发布进程事件
+_eventAggregator.SubscribeOnPublishedThread(this)
+```
+
+## 事件处理
+实现 IHandle<Eto> 接口
