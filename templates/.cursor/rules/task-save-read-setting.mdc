@@ -1,0 +1,9 @@
+---
+description: 保存/读取配置
+globs: 
+alwaysApply: false
+---
+
+# 保存/读取配置
+
+使用ABP的Setting管理模块来实现配置的保存和读取

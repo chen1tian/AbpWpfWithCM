@@ -1,0 +1,8 @@
+---
+description: 生成类，接口时实现依赖注入
+globs: 
+alwaysApply: false
+---
+
+# 自动依赖注入
+接口和类实现`ITransientDependency`或`ISingletonDependency`接口，即可完成自动依赖注入。
