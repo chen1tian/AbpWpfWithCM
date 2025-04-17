@@ -17,6 +17,7 @@
     <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.3.0" />
     <PackageReference Include="Volo.Abp.Http.Client" Version="8.0.5" />
     <PackageReference Include="Volo.Abp.SettingManagement.Application" Version="8.0.5" />
+    <PackageReference Include="WindowsAPICodePack" Version="8.0.6" />
   </ItemGroup>
 
   <ItemGroup>

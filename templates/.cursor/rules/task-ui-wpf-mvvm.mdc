@@ -1,11 +1,21 @@
 ---
-description: 新建|修改界面布局|新增修改控件
+description: 新建/修改界面布局，新增/修改控件
 globs: 
 alwaysApply: false
 ---
 ## 技术架构
 - 界面使用Wpf Mvvm框架Caliburn Micro
 - 控件库使用MaterialDesign
+- 优先使用`WindowsAPICodePack`来完成文件对话框，目录对话框，资源管理器等等功能。
+
+## 存放位置
+控件统一存放在`[WPF 客户端应用]/UI/Components/[控件名称复数形式]`目录下
+
+## 创建控件步骤
+1. 确定控件名称，确定控件复数形式名称
+2. 检查`[WPF 客户端应用]/UI/Components/[控件名称复数形式]`目录是否存在，不存在则创建。
+3. 检查控件所需模型类，如果需要，则创建在`[WPF 客户端应用]/UI/Components/[控件名称复数形式]/Dtos`目录下。
+4. 开始创建控件
 
 ## 命名格式
 - View：<名称>View.xaml
