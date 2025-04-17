@@ -4,6 +4,13 @@ globs:
 alwaysApply: false
 ---
 
-# 保存/读取配置
-
+## 保存/读取配置
 使用ABP的Setting管理模块来实现配置的保存和读取
+
+## 默认方法
+ISettingManager有多个方法,选择原则如下：
+- 租户级别使用(非当前租户)：_settingManager.SetForTenantAsync
+- 当前租户使用: _settingManager.SetForCurrentTenantAsync
+- 用户级别使用(非当前登录用户)：_settingManager.SetForUserAsync
+- 当前登录用户使用:SetForCurrentUserAsync
+- 单应用/桌面工具使用:_settingManager.SetGlobalAsync
