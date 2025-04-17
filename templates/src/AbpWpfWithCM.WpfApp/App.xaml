@@ -10,7 +10,7 @@
                 <ResourceDictionary>
                     <local:Bootstrapper x:Key="Bootstrapper" />
                     <converter:NullToBooleanConverter x:Key="NullToBooleanConverter"></converter:NullToBooleanConverter>
-                    <converter:InvertBooleanConverter x:Key="InvertBooleanConverter"></converter:InvertBooleanConverter>
+                    <converter:InverseBooleanConverter x:Key="InverseBooleanConverter"></converter:InverseBooleanConverter>
                     <converter:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"></converter:BooleanToVisibilityConverter>
                     <converter:BooleanToStringConverter x:Key="BooleanToStringConverter"></converter:BooleanToStringConverter>
                     <converter:BooleanToIconConverter x:Key="BooleanToIconConverter"></converter:BooleanToIconConverter>
